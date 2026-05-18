@@ -119,13 +119,6 @@ body {
   background: #fff;
 }
 
-/* Date range: two inputs side by side with "to" between them */
-.date-range {
-  display: flex;
-  align-items: column;
-  gap: 6px;
-}
-
 .filter-result-hint {
   font-size: 12px;
   color: #888;
@@ -190,7 +183,7 @@ body {
   flex: 1;
   min-width: 0;
   padding: 20px 24px;
-  margin-left: 260px; /* pushes results right of the fixed sidebar */
+  margin-left: 260px; 
 }
 
 .results-wrapper {
@@ -425,11 +418,7 @@ body {
   color: #555;
 }
 
-/*
-  CSS-only spinner — no library needed.
-  border trick: three sides transparent, one side colored,
-  then rotate it with an animation.
-*/
+/* CSS-only loading spinner. */
 .spinner {
   width: 36px;
   height: 36px;

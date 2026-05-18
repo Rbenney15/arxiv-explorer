@@ -16,12 +16,13 @@ export default function App() {
     clearFilters,
   } = useFilters(records)
 
-  if (loading) return (
-    <div className="loading-screen">
-      <div className="spinner" aria-label="Loading data" />
-      <p>Loading arXiv dataset…</p>
-    </div>
-  )
+  if (loading)
+    return (
+      <div className="loading-screen" role="status" aria-live="polite">
+        <div className="spinner" aria-hidden="true" />
+        <p>Loading arXiv dataset…</p>
+      </div>
+    );
 
   if (error) return (
     <div className="error-screen">

@@ -1,11 +1,6 @@
 /*
  * All filter controls in one panel. Receives current filter values
  * and callbacks from the parent — it owns zero state itself.
- *
- * WHY keep state out of this component?
- * The filtered results live in App.jsx (via useFilters). If FilterPanel
- * owned its own state we'd have two sources of truth and they'd drift.
- * Keeping it "controlled" (value + onChange) is the React way.
  */
 export default function FilterPanel({
   filters,
@@ -18,8 +13,8 @@ export default function FilterPanel({
     <aside className="filter-panel">
       <div className="filter-header">
         <h2>Filters</h2>
-        {/* Only show the clear button when something is actually active */}
         <button
+          type="button"
           className="clear-btn"
           onClick={onClear}
           disabled={
@@ -33,7 +28,6 @@ export default function FilterPanel({
         </button>
       </div>
 
-      {/* Category dropdown — options built from real data via collectCategories() */}
       <div className="filter-group">
         <label htmlFor="category-select">Subject category</label>
         <select
@@ -50,7 +44,6 @@ export default function FilterPanel({
         </select>
       </div>
 
-      {/* Date range — stacked vertically, each input full width */}
       <div className="filter-group">
         <label htmlFor="date-from">Date from</label>
         <input
@@ -71,7 +64,6 @@ export default function FilterPanel({
         />
       </div>
 
-      {/* Free-text affiliation search */}
       <div className="filter-group">
         <label htmlFor="affiliation-input">Affiliation</label>
         <input

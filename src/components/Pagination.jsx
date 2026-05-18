@@ -12,6 +12,7 @@ export default function Pagination({ page, totalPages, onPageChange }) {
   return (
     <nav className="pagination" aria-label="Results pagination">
       <button
+        type="button"
         onClick={() => onPageChange(1)}
         disabled={page === 1}
         aria-label="First page"
@@ -19,6 +20,7 @@ export default function Pagination({ page, totalPages, onPageChange }) {
         «
       </button>
       <button
+        type="button"
         onClick={() => onPageChange(page - 1)}
         disabled={page === 1}
         aria-label="Previous page"
@@ -31,6 +33,7 @@ export default function Pagination({ page, totalPages, onPageChange }) {
       </span>
 
       <button
+        type="button"
         onClick={() => onPageChange(page + 1)}
         disabled={page === totalPages}
         aria-label="Next page"
@@ -38,6 +41,7 @@ export default function Pagination({ page, totalPages, onPageChange }) {
         ›
       </button>
       <button
+        type="button"
         onClick={() => onPageChange(totalPages)}
         disabled={page === totalPages}
         aria-label="Last page"

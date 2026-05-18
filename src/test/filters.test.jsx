@@ -1,11 +1,4 @@
-/*
- * Unit tests for our utility functions in filterHelpers.js
- *
- * WHY test these first?
- * Pure functions are the easiest thing to test — no DOM, no React,
- * no mocking. Just input → output. If these pass, our core
- * filtering logic is solid regardless of how the UI is wired.
- */
+/* Unit tests for pure data transformation and filtering utilities. */
 import { describe, it, expect } from "vitest";
 import {
   parseDate,

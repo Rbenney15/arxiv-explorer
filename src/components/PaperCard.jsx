@@ -1,7 +1,4 @@
-/*
- * Renders one paper record as a table row.
- * The tr is the single root element — required by JSX.
- */
+/* Renders one paper record as a table row. */
 export default function PaperCard({ record }) {
   return (
     <tr className="paper-card">

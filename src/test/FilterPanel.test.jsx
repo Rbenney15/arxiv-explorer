@@ -1,12 +1,4 @@
-/*
- * Component tests using React Testing Library.
- *
- * WHY React Testing Library over Enzyme or raw Jest?
- * RTL encourages testing behavior the user actually experiences
- * (what's visible, what happens on interaction) rather than
- * implementation details (state values, method calls).
- * The guiding principle: "test what the user sees and does."
- */
+/* Component tests focused on visible behavior and user interactions. */
 import { describe, it, expect, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import FilterPanel from "../components/FilterPanel";
@@ -20,7 +12,7 @@ const defaultProps = {
     affiliation: "",
   },
   categories: ["cs", "math", "physics"],
-  onFilterChange: vi.fn(), // vi.fn() is Vitest's mock function (like jest.fn())
+  onFilterChange: vi.fn(), 
   onClear: vi.fn(),
   resultCount: 358490,
 };

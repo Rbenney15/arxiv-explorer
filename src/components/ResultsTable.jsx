@@ -1,7 +1,6 @@
 /*
- * Renders the paginated slice of filtered records as a table.
- * Owns the pagination state because only this component cares about it.
- * Resets to page 1 whenever the filtered records change (new filter applied).
+ * Renders the current filtered records as a paginated table.
+ * Pagination is local because it only affects table rendering.
  */
 import { useState, useEffect, useMemo } from "react";
 import PaperCard from "./PaperCard";
@@ -12,11 +11,7 @@ const PAGE_SIZE = 50; // rows per page — easy to change in one place
 export default function ResultsTable({ records }) {
   const [page, setPage] = useState(1);
 
-  /**
-   * When filters change, filteredRecords is a new array.
-   * We reset to page 1 so the user isn't left on page 40 of 5
-   * after narrowing a search.
-   */
+  // Reset pagination whenever the filtered result set changes.
   useEffect(() => {
     setPage(1);
   }, [records]);
@@ -50,7 +45,6 @@ export default function ResultsTable({ records }) {
             </tr>
           </thead>
           <tbody>
-            {/* Only PAGE_SIZE rows in the DOM at a time — no virtualization needed */}
             {pageRecords.map((record) => (
               <PaperCard key={record.id} record={record} />
             ))}

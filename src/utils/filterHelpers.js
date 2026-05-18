@@ -1,6 +1,6 @@
 /* Pure utility functions for data transformation and filtering. */
 
-/* Extracts a YYYY-MM-DD date string shortens */
+/* Extracts YYYY-MM-DD from an ISO date string. */
 export function parseDate(isoString) {
   if (!isoString) return null;
   return isoString.slice(0, 10);
@@ -32,15 +32,12 @@ export function applyFilters(records, filters) {
   const { category, dateFrom, dateTo, affiliation } = filters;
 
   return records.filter((record) => {
-    // Filter 1: subject category (e.g. "cs", "physics")
-    // Empty string means "all" — skip the check
+    // Empty filter values are treated as "all."
     if (category && !record.categories.includes(category)) return false;
 
-    // Filter 2: date range — both ends are optional
     if (dateFrom && record.date < dateFrom) return false;
     if (dateTo && record.date > dateTo) return false;
 
-    // Filter 3: affiliation text search (case-insensitive substring)
     if (affiliation) {
       const term = affiliation.toLowerCase();
       if (!record.affiliation.toLowerCase().includes(term)) return false;
@@ -50,9 +47,7 @@ export function applyFilters(records, filters) {
   });
 }
 
-/**
- * Used to populate the category dropdown with real values from the data.
- */
+/* Used to populate the category dropdown with real values from the data. */
 export function collectCategories(records) {
   const seen = new Set();
   for (const record of records) {

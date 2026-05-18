@@ -3,15 +3,12 @@ import { useState, useEffect } from "react";
 import { normalizeRecord } from "../utils/filterHelpers";
 
 export function useArxivData() {
-  // Three pieces of state: the data itself, a loading flag, and any error
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // useEffect with an empty dependency array [] runs once after
-    // the component mounts. 
-
+    // Load the static dataset once on mount.
 
     let cancelled = false; // prevents a state update if the component unmounts mid-fetch
 
