@@ -1,4 +1,3 @@
-
 import { useArxivData } from './hooks/useArxivData'
 import { useFilters }   from './hooks/useFilters'
 import FilterPanel      from './components/FilterPanel'

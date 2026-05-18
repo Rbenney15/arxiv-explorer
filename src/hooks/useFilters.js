@@ -1,5 +1,4 @@
 /*
- * useFilters.js
  * Custom hook that owns filter state and derives the filtered result set.
  *
  * Why useMemo here?

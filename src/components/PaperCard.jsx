@@ -1,5 +1,4 @@
-/**
- * PaperCard.jsx
+/*
  * Renders one paper record as a table row.
  * The tr is the single root element — required by JSX.
  */

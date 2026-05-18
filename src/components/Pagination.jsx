@@ -1,5 +1,4 @@
 /**
- * Pagination.jsx
  * Controls for navigating through paged results.
  *
  * WHY pagination?

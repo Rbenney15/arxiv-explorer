@@ -1,5 +1,4 @@
-/**
- * ResultsTable.jsx
+/*
  * Renders the paginated slice of filtered records as a table.
  * Owns the pagination state because only this component cares about it.
  * Resets to page 1 whenever the filtered records change (new filter applied).
