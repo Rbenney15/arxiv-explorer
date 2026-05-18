@@ -3,7 +3,7 @@
 An interactive data tool for exploring and filtering arXiv research paper metadata. Built as a take-home exercise demonstrating thoughtful UX engineering with a focus on performance, code quality, and testability.
 
 ## Screenshot
-
+<img width="1646" height="913" alt="arXiv_homepage" src="https://github.com/user-attachments/assets/b1a820e3-1ed0-4a6c-8b49-12fbc9d8dfe8" />
 
 ## Features
 
