@@ -3,7 +3,7 @@
 An interactive data tool for exploring and filtering arXiv research paper metadata. Built as a take-home exercise demonstrating thoughtful UX engineering with a focus on performance, code quality, and testability.
 
 ## Screenshot
-
+<img width="1646" height="913" alt="arXiv_homepage" src="https://github.com/user-attachments/assets/b1a820e3-1ed0-4a6c-8b49-12fbc9d8dfe8" />
 
 ## Features
 
@@ -23,23 +23,6 @@ An interactive data tool for exploring and filtering arXiv research paper metada
 - [React Testing Library](https://testing-library.com/) — behavior-driven component tests
 - Plain CSS — no UI framework, intentional
 
-## Project Structure
-src/
-├── components/
-│   ├── FilterPanel.jsx    # All filter controls (controlled, stateless)
-│   ├── PaperCard.jsx      # Single table row for one paper record
-│   ├── Pagination.jsx     # Page navigation controls
-│   ├── ResultsTable.jsx   # Paginated results table
-│   └── StatsBar.jsx       # Filtered vs total count display
-├── hooks/
-│   ├── useArxivData.js    # Fetches and normalizes the dataset on mount
-│   └── useFilters.js      # Filter state and memoized filtered results
-├── utils/
-│   └── filterHelpers.js   # Pure functions: normalize, filter, collect categories
-└── test/
-├── setup.js            # Testing Library jest-dom setup
-├── filters.test.jsx    # Unit tests for all filter utility functions
-└── FilterPanel.test.jsx # Component tests for filter UI behavior
 ## Getting Started
 
 ```bash
