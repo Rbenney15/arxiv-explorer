@@ -25,21 +25,21 @@ An interactive data tool for exploring and filtering arXiv research paper metada
 
 ## Project Structure
 src/
-├── components/
-│   ├── FilterPanel.jsx    # All filter controls (controlled, stateless)
-│   ├── PaperCard.jsx      # Single table row for one paper record
-│   ├── Pagination.jsx     # Page navigation controls
-│   ├── ResultsTable.jsx   # Paginated results table
-│   └── StatsBar.jsx       # Filtered vs total count display
-├── hooks/
-│   ├── useArxivData.js    # Fetches and normalizes the dataset on mount
-│   └── useFilters.js      # Filter state and memoized filtered results
-├── utils/
-│   └── filterHelpers.js   # Pure functions: normalize, filter, collect categories
-└── test/
-├── setup.js            # Testing Library jest-dom setup
-├── filters.test.jsx    # Unit tests for all filter utility functions
-└── FilterPanel.test.jsx # Component tests for filter UI behavior
+components/
+  FilterPanel.jsx    # All filter controls (controlled, stateless)
+  PaperCard.jsx      # Single table row for one paper record
+  Pagination.jsx     # Page navigation controls
+  ResultsTable.jsx   # Paginated results table
+  StatsBar.jsx       # Filtered vs total count display
+hooks/
+  useArxivData.js    # Fetches and normalizes the dataset on mount
+  useFilters.js      # Filter state and memoized filtered results
+utils/
+  filterHelpers.js   # Pure functions: normalize, filter, collect categories
+test/
+  setup.js            # Testing Library jest-dom setup
+  filters.test.jsx    # Unit tests for all filter utility functions
+  FilterPanel.test.jsx # Component tests for filter UI behavior
 ## Getting Started
 
 ```bash
